@@ -1,4 +1,4 @@
-package com.codinginflow.imagesearchapp.data
+package com.codinginflow.imagesearchapp.data.cloud
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
@@ -8,7 +8,7 @@ data class UnsplashPhotoCloud(
     val id: String,
     val description: String?,
     val urls: UnsplashPhotoUrlsCloud,
-    val user: UserUnsplashCloud,
+    val user: UnsplashUserCloud,
 ) : Parcelable {
     @Parcelize
     data class UnsplashPhotoUrlsCloud(
@@ -20,7 +20,7 @@ data class UnsplashPhotoCloud(
     ) : Parcelable
 
     @Parcelize
-    data class UserUnsplashCloud(
+    data class UnsplashUserCloud(
         val name: String,
         val username: String
     ) : Parcelable {
